@@ -10,7 +10,7 @@ function App() {
   const [usernameSet, setUsernameSet] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Scroll to the bottom of the chat when new messages are added
+ 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -20,12 +20,12 @@ function App() {
   }, [messages]);
 
   useEffect(() => {
-    // Listen for incoming messages from the server
+
     socket.on("receiveMessage", (newMessage) => {
       setMessages((prevMessages) => [...prevMessages, newMessage]);
     });
 
-    // Cleanup on unmount
+ 
     return () => {
       socket.off("receiveMessage");
     };
@@ -33,10 +33,10 @@ function App() {
 
   const sendMessage = () => {
     if (message.trim() && user.trim()) {
-      // Emit the message to the server
+      
       socket.emit("sendMessage", { user, message });
 
-      // Add the user's message to the chat
+    
       setMessages((prevMessages) => [
         ...prevMessages,
         { user: user, message: message },
