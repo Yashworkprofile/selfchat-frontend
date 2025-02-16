@@ -26,6 +26,13 @@ A lightweight chat application built with **React.js** and **Socket.io** for rea
    - The backend is built using **Strapi 5** and is deployed on Render.  
    - The backend URL: [`https://selfchat-backend.onrender.com`](https://selfchat-backend.onrender.com)  
 
+
+# ⚠️ Important Notice
+
+After starting the frontend, **please wait for at least 5 minutes** before attempting to use the chat. This delay ensures that the WebSocket server is fully initialized and ready for communication.
+
+If the chat does not work immediately, please refresh the page and try again.
+
 ---
 
 ## 🛠 Future Improvements  

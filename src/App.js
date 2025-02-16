@@ -57,6 +57,10 @@ function App() {
     <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
       <h1>Simple Chat App</h1>
 
+      <p style={{ color: "red", fontWeight: "bold", textAlign: "center" }}>
+        ⚠️ Please wait **5 minutes** after starting the frontend before using the chat as server in render.
+      </p>
+
       {!usernameSet ? (
         <form onSubmit={handleUsernameSubmit}>
           <input
